@@ -6,6 +6,7 @@ PWD       := $(shell pwd)
 
 CONFIG_RTW89_CORE=m
 CONFIG_RTW89_USB=m
+CONFIG_RTW89_PCI=m
 
 ########### section below is for upstream kernel ###########
 
@@ -32,6 +33,9 @@ rtw89_core-$(CONFIG_RTW89_DEBUG) += debug.o
 
 obj-$(CONFIG_RTW89_USB) += rtw89_usb.o
 rtw89_usb-y := usb.o
+
+obj-$(CONFIG_RTW89_PCI) += rtw89pci.o
+rtw89pci-y := pci.o
 
 
 ########### section above is for upstream kernel ###########
