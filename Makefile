@@ -3,10 +3,14 @@
 KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 PWD       := $(shell pwd)
 
-
+CONFIG_RTW89=m
 CONFIG_RTW89_CORE=m
 CONFIG_RTW89_USB=m
 CONFIG_RTW89_PCI=m
+CONFIG_RTW89_8852AE=m
+CONFIG_RTW89_DEBUG=y
+CONFIG_RTW89_DEBUGMSG=y
+CONFIG_RTW89_DEBUGFS=y
 
 ########### section below is for upstream kernel ###########
 
